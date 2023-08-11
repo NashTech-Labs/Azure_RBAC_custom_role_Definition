@@ -16,7 +16,7 @@ Service Principal:-
 Clone this Git repo to your local machine.
 
 ```bash
-cd customrole
+cd custom-role
 ```
 
 Create a new file `terraform.tfvars` in the same directory as your `.tf` files.
