@@ -1,24 +1,24 @@
-variable "azure_client_id" {
+variable "client_id" {
   description = "Service Principal (application-id) Client id details"
 }
 
-variable "azure_client_secret" {
+variable "client_secret" {
   description = "Service Principal Client Secrets value details"
 }
 
-variable "azure_tenant_id" {
+variable "tenant_id" {
   description = "Service Principal tenant id details"
 }
 
-variable "azure_subscription_id" {
+variable "subscription_id" {
   description = "Service Principal subsription id details"
 }
 
-variable "scope" {
+variable "scope_subs" {
   description = "scope of role --> When a custom role is assigned at the subscription level, the permissions defined in the role apply to all resources within that subscription"
 }
 
-variable "roles" {
+variable "roles_define" {
   type = list(object({
     name        = string
     description = string
