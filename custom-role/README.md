@@ -4,8 +4,8 @@ This Terraform repo contains a code that create custom role in Azure.
 
 Use this Terraform code, you will need to have the following installed:
 
-- [Terraform]
-- [Azure CLI]
+- Terraform
+- Azure CLI
 
 Service Principal:-
 
@@ -21,25 +21,24 @@ cd custom-role
 
 Create a new file `terraform.tfvars` in the same directory as your `.tf` files.
 
-```bash
+
 touch terraform.tfvars
-```
+
 
 Open the file in your preferred text editor.
 
-```bash
+
 nano terraform.tfvars
-```
 
 Add your desired inputs to the file in the following format:
 
 ```ruby
-azure_client_id          = "this contain the service principal application (client) ID"
-azure_client_secret      = "this contain the service principal secret value"
-azure_tenant_id          = "this contain the service principal tenant ID"
-azure_subscription_id    = "this contain the subscription ID"
-scope                    = "/subscription/subscription-ID (mention your subscription-ID)"
-custom_roles             =  [
+client_id          = "this contain the service principal application (client) ID"
+client_secret      = "this contain the service principal secret value"
+tenant_id          = "this contain the service principal tenant ID"
+subscription_id    = "this contain the subscription ID"
+scope_subs                   = "/subscription/subscription-ID (mention your subscription-ID)"
+roles_define             =  [
     {
       name        = "list-key"
       description = "it will list the value of keys"
@@ -67,12 +66,10 @@ Review the changes that Terraform will make to your Azure resources.
 
 Initialize Terraform in the directory.
 
-```bash
+
 terraform init
-```
-```bash
+
 terraform plan
-```
-```bash
+
 terraform apply
-```
+
